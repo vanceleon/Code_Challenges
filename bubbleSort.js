@@ -18,3 +18,16 @@ function bubbleSort (arr, endIndex) {
   }
   console.log(bubbleSort([1,4,3,25,40,2,9,2], 7));
   
+
+function bubbleSort (arr, endIndex) {
+  while(endIndex >= 0) {
+    for (let i = 0; i < endIndex; i++){
+      if(arr[i] > arr[i + 1]){
+        [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
+      }
+    }
+    endIndex--;
+  }
+  return arr
+}
+console.log(bubbleSort([1,4,3,25,40,2,9,2], 7));
