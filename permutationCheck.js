@@ -7,8 +7,11 @@ const obj1 = {};
 
 // solution given is O(n) run time
 const permutationCheck = (str1, str2) => {
+  if (str1.length != str2.length) {
+    return false;
+  }
   for (let i = 0; i < str1.length; i++) {
-    obj1[str1[i]] = 1;
+    obj1[str1[i]] += 1;
     console.log(obj1)
   }
   for (let i = 0; i < str2.length; i++) {
@@ -19,3 +22,6 @@ const permutationCheck = (str1, str2) => {
   return true
 }
 console.log(permutationCheck(str1, str2));
+
+
+
