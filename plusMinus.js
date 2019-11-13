@@ -5,8 +5,8 @@ function fractionConvert(obj, n) {
     let num;
     num = obj[key] / n;
     obj[key] = num.toPrecision(6);
+    console.log(obj[key])
   }
-  return obj
 }
 
 
@@ -29,9 +29,7 @@ function plusMinus(arr) {
       results.zer++;
     }
   }
-  const finalObj = fractionConvert(results, n);
-  for (const key in finalObj) {
-    console.log(finalObj[key]);
-  }
+return fractionConvert(results, n);
+
 }
 console.log(plusMinus(arr));
