@@ -15,7 +15,5 @@ Array.prototype.forEach = function(cb) {
 
 [1, 2, 3].forEach(num => {
    const multiple = num * 30;
-   console.log("what is num", multiple)
-
    return multiple;
 });
