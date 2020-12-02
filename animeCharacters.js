@@ -44,7 +44,15 @@ class AnimeCharacter {
     }else{
       console.log(`Don't have enough power for attack`);
     }
-
+  }
+  damage(self, inflictedDamage){
+    if(this.powerLev) {
+      this.powerLev = this.powerLev - inflictedDamage;
+      if(this.powerLev <= 0){
+        console.log(`${self.name} has fainted`);
+      }
+      console.log("current power level", this.powerLev)
+    }
   }
 }
 
@@ -64,3 +72,5 @@ const opponent = new AnimeCharacter('Opponent',   'Kota',
 console.log(staticShock.name);
 console.log(staticShock.specialAttack(staticShock, opponent));
 console.log(opponent);
+console.log(opponent.damage(opponent, 90));
+console.log(opponent.damage(opponent, 15));
